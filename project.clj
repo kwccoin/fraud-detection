@@ -14,4 +14,9 @@
   :main fraud-detection.main
   :aot [fraud-detection.main]
 
-  :repl-options {:init-ns fraud-detection.core})
+  :repl-options {:init-ns fraud-detection.core
+             ;; If nREPL takes too long to load it may timeout,
+             ;; increase this to wait longer before timing out.
+             ;; Defaults to 30000 (30 seconds)
+             :timeout 1200000
+             })
